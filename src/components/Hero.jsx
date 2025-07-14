@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
-import profileImg from '../img/profile.jpg'
+import profileImg from '../img/profile.jpg';
 
 function Hero() {
   return (
@@ -9,8 +9,8 @@ function Hero() {
       id="home"
       className="scroll-mt-24 min-h-screen flex items-center bg-gradient-to-r from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white px-6"
     >
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-center justify-between gap-10 md:gap-0 w-full">
-        {/* LEFT SIDE - TEXT */}
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-0 w-full">
+        {/* LEFT - TEXT */}
         <div className="text-center md:text-left space-y-6 md:w-1/2" data-aos="fade-right">
           <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
             Hi, I'm <span className="text-teal-400">Aryan 👋</span>
@@ -29,27 +29,24 @@ function Hero() {
           <p className="text-gray-400">
             I craft modern, responsive websites using clean code, design focus, and powerful tools like React & Tailwind.
           </p>
-
-          <div className="flex justify-center md:justify-start gap-4">
+          <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
             <a
               href="#contact"
-              className="bg-teal-500 text-white px-6 py-2 rounded hover:bg-teal-600 transition duration-300 shadow-md"
+              className="bg-teal-500 text-white px-6 py-2 rounded hover:bg-teal-600 transition shadow-md text-center"
             >
               Hire Me
             </a>
-          <a
-  href="/resume.pdf"
-  download
-  className="border border-gray-500 text-white px-6 py-2 rounded hover:bg-gray-700 transition shadow-md"
->
-  Download Resume
-</a>
-
+            <a
+              href="/resume.pdf"
+              download="Aryan_Resume.pdf"
+              className="border border-gray-500 text-white px-6 py-2 rounded hover:bg-gray-700 transition shadow-md text-center"
+            >
+              Download Resume
+            </a>
           </div>
-
           <div className="flex justify-center md:justify-start gap-4 mt-4 text-2xl">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/student-creative"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-teal-400"
@@ -57,28 +54,27 @@ function Hero() {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/aryan-sutariya-717a86291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-teal-400"
             >
               <FaLinkedin />
             </a>
-
           </div>
         </div>
 
-        {/* RIGHT SIDE - IMAGE */}
-        <div className="md:w-1/2 flex justify-center md:justify-end pr-16" data-aos="fade-left">
+        {/* RIGHT - IMAGE */}
+        <div className="md:w-1/2 flex justify-center md:justify-end md:pr-16" data-aos="fade-left">
           <img
             src={profileImg}
             alt="Aryan"
-            className="w-64 h-64 rounded-full border-4 border-teal-400 object-cover  hover:scale-105 transition duration-500 shadow-xl"
+            className="w-64 h-64 rounded-full border-4 border-teal-400 object-cover hover:scale-105 transition duration-500 shadow-xl"
           />
         </div>
       </div>
     </section>
   );
-};
+}
 
 export default Hero;
