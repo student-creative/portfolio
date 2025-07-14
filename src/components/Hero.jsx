@@ -1,9 +1,20 @@
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
+import { toast } from 'react-toastify';
 import profileImg from '../img/profile.jpg';
 
 function Hero() {
+  const handleResumeDownload = () => {
+    toast.success('Resume download');
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Aryan_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section
       id="home"
@@ -36,13 +47,12 @@ function Hero() {
             >
               Hire Me
             </a>
-            <a
-              href="/resume.pdf"
-              download="Aryan_Resume.pdf"
+            <button
+              onClick={handleResumeDownload}
               className="border border-gray-500 text-white px-6 py-2 rounded hover:bg-gray-700 transition shadow-md text-center"
             >
               Download Resume
-            </a>
+            </button>
           </div>
           <div className="flex justify-center md:justify-start gap-4 mt-4 text-2xl">
             <a
@@ -54,7 +64,7 @@ function Hero() {
               <FaGithub />
             </a>
             <a
-              href="https://www.linkedin.com/in/aryan-sutariya-717a86291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
+              href="https://www.linkedin.com/in/aryan-sutariya-717a86291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-teal-400"
