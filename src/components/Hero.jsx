@@ -37,13 +37,14 @@ function Hero() {
             >
               Hire Me
             </a>
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              className="border border-gray-500 text-white px-6 py-2 rounded hover:bg-gray-700 transition shadow-md"
-            >
-              Resume
-            </a>
+          <a
+  href="/resume.pdf"
+  download
+  className="border border-gray-500 text-white px-6 py-2 rounded hover:bg-gray-700 transition shadow-md"
+>
+  Download Resume
+</a>
+
           </div>
 
           <div className="flex justify-center md:justify-start gap-4 mt-4 text-2xl">
